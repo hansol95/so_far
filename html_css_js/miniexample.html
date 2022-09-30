@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>미니 예제- 객체 선언, 값 추가, 반복 출력, 함수선언 및 사용. </h1>
+    <script>
+        var lhs = {
+            "화면 설계 및 구현": "생활코딩",
+            "데이터베이스": "오라클 RDBMS",
+        }
+        lhs["화면 설계 프로젝트"] = "개인프로젝트";
+        lhs["데이터베이스 프로젝트"] = "DB 설계";
+    </script>
+
+    <h2>키와 값 모두 출력하기.</h2>
+    <script>
+        for (var key in lhs) {
+            document.write(key + ' : ' + lhs[key] + '<br>');
+        }
+
+    </script>
+
+
+    <h2>Property & Method 객체 함수 만들기</h2>
+    <script>
+        
+        lhs.study = function () {
+            for (var key in lhs) {
+                if (key != 'study')
+                document.write(key + ' : ' + lhs[key] + '<br>');
+            }
+        }
+        lhs.study();
+    </script>
+
+    <h2>Property & Method -> this 대체하고 객체 함수 만들기</h2>
+    <script>
+        lhs.study = function () {
+            for (var key in this) {
+                if (key != 'study')
+                document.write(key + ' : ' + this[key] + '<br>');
+            }
+        }
+        lhs.study();
+    </script>
+
+
+
+
+</body>
+
+</html>

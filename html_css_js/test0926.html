@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<h1>test0926 연습장</h1>
+
+<h2>IF-true</h2>
+<script>
+  document.write("1<br>");
+  if(true) {
+    document.write("2<br>");
+  } else {
+    document.write("3<br>");
+  }
+  document.write("4<br>");
+</script>
+
+
+<h3>1&lt;2</h3>
+  <script>
+    document.write(1<2);
+  </script>
+  <h3>1&lt;1</h3>
+  <script>
+    document.write(1<2);
+  </script><br>
+
+<input id="night_day" type="button" class="btn btn-warning" value="night" onclick="
+      if(document.querySelector('#night_day').value === 'night') {
+          document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color= 'white';
+        document.querySelector('#night_day').value = 'day';   
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color= 'black';
+        document.querySelector('#night_day').value = 'night';   
+      }
+      "><br>
+
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor = 'black';       
+document.querySelector('body').style.color = 'white';">
+
+<input type="button" value="day" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';"><br>
+<h3>onchange 함수 확인하기</h3>
+<input type="text" onchange="alert('changed')"><br>
+<h3>onkeydown 함수 확인하기</h3>
+<input type="text" onkeydown="alert('key down')"><br>
+<input type="button" value="hi" onclick="alert('hi')"><br>
+
+
+
+<script>
+  document.write('hello world'); //동적이다
+</script>
+
+<script>
+  document.write(1+1); //동적이다
+</script>
+
+<h1>html</h1> <!--정적이다-->
+1+1
+<br>
+
+<script>
+  var target = document.querySelector('body');
+</script>
+
+<input id="night_day2" type="button" class="btn btn-danger" value="night" onclick="
+if(this.value === 'night') {
+  target.style.backgroundColor = 'black';
+  target.style.color= 'white';
+  this.value = 'day';   
+} else {
+  target.style.backgroundColor = 'white';
+  target.style.color= 'black';
+  this.value = 'night';
+  }">
+
+
+
+
+
+
+</body>
+</html>
